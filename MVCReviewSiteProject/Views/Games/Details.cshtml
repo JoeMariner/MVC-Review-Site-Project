@@ -1,0 +1,103 @@
+﻿@model MVCReviewSiteProject.Models.Game
+
+@{
+    ViewBag.Title = "Details";
+}
+
+
+<div class="row"> @*Name of the game, system, and year publish align along top of review*@
+    <div class="col-md-4 bg-success">
+        <h4>
+            Game:
+            @Html.DisplayFor(model => model.NameOfGame)
+        </h4>
+    </div>
+    <div class="col-md-4 bg-primary">
+        <h4>
+            System:
+            @Html.DisplayFor(model => model.Category.System)
+        </h4>
+    </div>
+    <div class="col-md-4 bg-danger">
+        <h4>
+            Year published:
+            @Html.DisplayFor(model => model.YearPublished)
+        </h4>
+    </div>
+
+</div>
+<div id="content" class="row"> @*whole row is content of the review*@
+    <br />
+    @Html.DisplayNameFor(model => model.ReviewedBy)
+    @Html.DisplayFor(model => model.ReviewedBy)
+    <br />
+    <br />
+    @Html.DisplayFor(model => model.Review)
+    <br />
+    <br />
+    @Html.DisplayNameFor(model => model.Rating)
+    @Html.DisplayFor(model => model.Rating)
+    <br />
+    <br />
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+
+@*<div>*@
+    @*<h4>Game</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Category.System)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Category.System)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NameOfGame)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NameOfGame)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ReviewedBy)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ReviewedBy)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.YearPublished)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.YearPublished)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Review)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Review)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Rating)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Rating)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>*@

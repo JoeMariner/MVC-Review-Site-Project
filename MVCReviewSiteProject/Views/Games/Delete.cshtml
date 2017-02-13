@@ -1,0 +1,72 @@
+﻿@model MVCReviewSiteProject.Models.Game
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Game</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Category.System)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Category.System)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NameOfGame)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NameOfGame)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ReviewedBy)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ReviewedBy)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.YearPublished)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.YearPublished)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Review)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Review)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Rating)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Rating)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>
